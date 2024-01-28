@@ -15,7 +15,7 @@ import static io.qameta.allure.Allure.step;
 public class TestBase {
     @BeforeAll
     static void openPage() {
-        step("Go to main page", () -> open());
+        step("Go to main page", () -> open("/"));
     }
 
     @BeforeAll

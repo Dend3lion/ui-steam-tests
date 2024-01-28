@@ -5,7 +5,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class CommunityTests {
+public class CommunityTests extends TestBase {
     @Test
     @Feature("Community")
     @Story("Community menu")

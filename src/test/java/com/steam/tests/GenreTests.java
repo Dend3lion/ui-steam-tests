@@ -6,7 +6,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class GenreTests {
+public class GenreTests extends TestBase {
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
 

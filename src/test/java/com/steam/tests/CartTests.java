@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class CartTests {
+public class CartTests extends TestBase {
     MainPage mainPage = new MainPage();
     CartPage cartPage = new CartPage();
     GamePage gamePage = new GamePage();

@@ -10,7 +10,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class LocalizationTests {
+public class LocalizationTests extends TestBase {
     MainPage mainPage = new MainPage();
 
     static Stream<Arguments> mainNavbarButtons() {
