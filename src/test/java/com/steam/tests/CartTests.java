@@ -3,9 +3,7 @@ package com.steam.tests;
 import com.steam.pages.CartPage;
 import com.steam.pages.GamePage;
 import com.steam.pages.MainPage;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -19,8 +17,10 @@ public class CartTests {
     @ValueSource(
             strings = {"COCOON", "Cities: Skylines II", "Citizen Sleeper"}
     )
+    @Feature("Store")
+    @Story("Cart")
     @Owner("Denis Bashkatov")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.BLOCKER)
     @ParameterizedTest(name = "Add game {0} to cart")
     void addToCartTest(String gameName) {
         mainPage.fillSearchInput(gameName)
@@ -32,6 +32,8 @@ public class CartTests {
     @ValueSource(
             strings = {"COCOON", "Cities: Skylines II", "Citizen Sleeper"}
     )
+    @Feature("Store")
+    @Story("Cart")
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.CRITICAL)
     @ParameterizedTest(name = "Remove game {0} from cart")
@@ -45,6 +47,8 @@ public class CartTests {
     }
 
     @Test
+    @Feature("Store")
+    @Story("Cart")
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Remove all items from cart")

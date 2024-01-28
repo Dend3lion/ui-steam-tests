@@ -17,7 +17,7 @@ public class CommunityPage {
     private final SelenideElement activeCommunityTab = $(".apphub_sectionTab.active");
 
     @Step("Hover over 'Community' navbar item")
-    public CommunityPage hoverCommunityItem() {
+    public CommunityPage hoverCommunityNavItem() {
         communityNavButton.hover();
         return this;
     }
