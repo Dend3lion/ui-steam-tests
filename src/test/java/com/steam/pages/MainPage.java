@@ -1,5 +1,6 @@
 package com.steam.pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.steam.config.Locale;
 import io.qameta.allure.Step;
@@ -20,6 +21,7 @@ public class MainPage {
     private final SelenideElement languageButton = $("#language_pulldown");
     private final SelenideElement languageDropdown = $("#language_dropdown");
     private final SelenideElement genresBlock = $(".home_page_gutter");
+    private final ElementsCollection mainNavbarButtons = $$(".supernav_container a").filter(visible);
 
     @Step("Click 'Language' button")
     public MainPage clickLanguageButton() {
@@ -60,6 +62,12 @@ public class MainPage {
     @Step("Check that '{gameName}' is in Search dropdown")
     public MainPage checkDropdownList(String gameName) {
         searchDropdown.shouldHave(text(gameName));
+        return this;
+    }
+
+    @Step("Check main navbar buttons")
+    public MainPage checkNavbarButtons(List<String> navbarOptions) {
+        mainNavbarButtons.shouldHave(texts(navbarOptions));
         return this;
     }
 }

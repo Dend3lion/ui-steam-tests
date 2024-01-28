@@ -21,7 +21,7 @@ public class CartTests {
     @Story("Cart")
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.BLOCKER)
-    @ParameterizedTest(name = "Add game {0} to cart")
+    @ParameterizedTest(name = "Add game '{0}' to cart")
     void addToCartTest(String gameName) {
         mainPage.fillSearchInput(gameName)
                 .clickGameItem(gameName);
@@ -36,7 +36,7 @@ public class CartTests {
     @Story("Cart")
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.CRITICAL)
-    @ParameterizedTest(name = "Remove game {0} from cart")
+    @ParameterizedTest(name = "Remove game '{0}' from cart")
     void removeFromCartTest(String gameName) {
         mainPage.fillSearchInput(gameName)
                 .clickGameItem(gameName);

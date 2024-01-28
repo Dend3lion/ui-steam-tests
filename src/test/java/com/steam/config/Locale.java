@@ -2,7 +2,7 @@ package com.steam.config;
 
 public enum Locale {
     EN("English (английский)"),
-    DE("Deutsch (немецкий)"),
+    IT("Italiano (итальянский)"),
     RU("Русский (Russian)");
     private final String desc;
 
