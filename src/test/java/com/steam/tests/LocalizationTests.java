@@ -2,9 +2,7 @@ package com.steam.tests;
 
 import com.steam.config.Locale;
 import com.steam.pages.MainPage;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -23,6 +21,8 @@ public class LocalizationTests {
         );
     }
 
+    @Feature("Common")
+    @Story("Localization")
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.CRITICAL)
     @MethodSource
