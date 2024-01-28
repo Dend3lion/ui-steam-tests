@@ -7,31 +7,31 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class ResultsPage {
+public class SearchPage {
     private final SelenideElement pageTitle = $(".pageheader");
     private final SelenideElement searchResultsBlock = $("#search_result_container");
     private final SelenideElement steamLogo = $(".logo");
 
     @Step("Check that '{gameName}' in Search results")
-    public ResultsPage checkPageTitle(String title) {
+    public SearchPage checkPageTitle(String title) {
         pageTitle.shouldHave(text(title));
         return this;
     }
 
     @Step("Go to main page")
-    public ResultsPage goToMainPage() {
+    public SearchPage goToMainPage() {
         steamLogo.click();
         return this;
     }
 
     @Step("Check that '{gameName}' in Search results")
-    public ResultsPage checkGameInSearchResults(String gameName) {
+    public SearchPage checkGameInSearchResults(String gameName) {
         searchResultsBlock.shouldHave(text(gameName));
         return this;
     }
 
     @Step("Click '{gameName}' item")
-    public ResultsPage clickGameItem(String gameName) {
+    public SearchPage clickGameItem(String gameName) {
         searchResultsBlock.$(byText(gameName)).click();
         return this;
     }

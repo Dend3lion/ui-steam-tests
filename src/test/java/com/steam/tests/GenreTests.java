@@ -1,14 +1,14 @@
 package com.steam.tests;
 
 import com.steam.pages.MainPage;
-import com.steam.pages.ResultsPage;
+import com.steam.pages.SearchPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class GenreTests {
     MainPage mainPage = new MainPage();
-    ResultsPage resultsPage = new ResultsPage();
+    SearchPage searchPage = new SearchPage();
 
     @CsvSource({
             "Free to Play, FREE TO PLAY GAMES",
@@ -25,7 +25,7 @@ public class GenreTests {
             String pageTitle
     ) {
         mainPage.selectGenre(genre);
-        resultsPage.checkPageTitle(pageTitle)
+        searchPage.checkPageTitle(pageTitle)
                 .goToMainPage();
     }
 }

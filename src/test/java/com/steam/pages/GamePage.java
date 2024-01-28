@@ -12,7 +12,7 @@ public class GamePage {
     private final SelenideElement addToCartButton = $$(".btn_addtocart .btn_green_steamui").first();
 
     @Step("Check that '{gameName}' page is open")
-    public GamePage checkSearchResults(String gameName) {
+    public GamePage checkGameTitle(String gameName) {
         gameTitle.shouldBe(text(gameName));
         return this;
     }

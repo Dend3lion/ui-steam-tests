@@ -60,7 +60,7 @@ public class MainPage {
     }
 
     @Step("Check that '{gameName}' is in Search dropdown")
-    public MainPage checkDropdownList(String gameName) {
+    public MainPage checkSearchDropdownList(String gameName) {
         searchDropdown.shouldHave(text(gameName));
         return this;
     }
