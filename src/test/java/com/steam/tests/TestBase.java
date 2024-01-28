@@ -13,7 +13,6 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class TestBase {
-
     @BeforeAll
     static void openPage() {
         step("Go to main page", () -> open());

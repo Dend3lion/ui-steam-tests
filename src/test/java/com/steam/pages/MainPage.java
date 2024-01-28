@@ -2,6 +2,7 @@ package com.steam.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.steam.config.Locale;
+import io.qameta.allure.Step;
 
 import java.util.List;
 
@@ -20,41 +21,43 @@ public class MainPage {
     private final SelenideElement languageDropdown = $("#language_dropdown");
     private final SelenideElement genresBlock = $(".home_page_gutter");
 
+    @Step("Click 'Language' button")
     public MainPage clickLanguageButton() {
         languageButton.click();
         return this;
     }
 
+    @Step("Click '{locale.getDesc()}' in Language dropdown")
     public MainPage selectLanguage(Locale locale) {
         languageDropdown.$(byText((locale.getDesc()))).click();
         return this;
     }
 
-    public MainPage checkButtons(List<String> buttons) {
-        $$(".supernav_container a").filter(visible).shouldHave(texts(buttons));
+    @Step("Click '{genre}' genre")
+    public MainPage selectGenre(String genre) {
+        genresBlock.$(byText(genre)).click();
         return this;
     }
 
-    public MainPage selectGenre(String categories) {
-        genresBlock.$(byText(categories)).click();
-        return this;
-    }
-
+    @Step("Fill search bar with '{gameName}'")
     public MainPage fillSearchInput(String gameName) {
         searchInput.setValue(gameName);
         return this;
     }
 
+    @Step("Click Search button")
     public MainPage clickSearchButton() {
         searchButton.click();
         return this;
     }
 
+    @Step("Click '{gameName}' in Search dropdown")
     public MainPage clickGameItem(String gameName) {
         searchDropdown.$(byText(gameName)).click();
         return this;
     }
 
+    @Step("Check that '{gameName}' is in Search dropdown")
     public MainPage checkDropdownList(String gameName) {
         searchDropdown.shouldHave(text(gameName));
         return this;
