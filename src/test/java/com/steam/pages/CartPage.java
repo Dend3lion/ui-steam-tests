@@ -14,7 +14,7 @@ public class CartPage {
     private final SelenideElement purchaseSelfButton = checkoutBlock.$(byText("Purchase as a gift"));
     private final SelenideElement purchaseGiftButton = checkoutBlock.$(byText("Purchase for myself"));
     private final SelenideElement removeGameFromCartButton = checkoutBlock.$$(".remove_link").first();
-    private final SelenideElement removeAllFromCartButton = checkoutBlock.$$(".remove_link").last();
+    private final SelenideElement removeAllFromCartButton = $(".checkout_notes_and_continue_shopping_ctn .remove_link");
     private final ElementsCollection cartItemsList = checkoutBlock.$$(".cart_item");
 
 
