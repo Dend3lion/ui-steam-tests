@@ -11,8 +11,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CartPage {
     private final SelenideElement checkoutBlock = $(".checkout_content_box");
-    private final SelenideElement purchaseSelfButton = checkoutBlock.$(byText("Purchase as a gift"));
-    private final SelenideElement purchaseGiftButton = checkoutBlock.$(byText("Purchase for myself"));
+    private final SelenideElement purchaseSelfButton = checkoutBlock.$(byText("Purchase as a gift")).parent();
+    private final SelenideElement purchaseGiftButton = checkoutBlock.$(byText("Purchase for myself")).parent();
     private final SelenideElement removeGameFromCartButton = checkoutBlock.$$(".remove_link").first();
     private final SelenideElement removeAllFromCartButton = $(".checkout_notes_and_continue_shopping_ctn .remove_link");
     private final ElementsCollection cartItemsList = checkoutBlock.$$(".cart_item");
