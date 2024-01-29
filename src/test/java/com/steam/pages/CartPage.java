@@ -52,8 +52,8 @@ public class CartPage {
     @Step("Check that cart is empty")
     public CartPage checkCartIsEmpty() {
         cartItemsList.shouldBe(CollectionCondition.empty);
-        purchaseSelfButton.shouldHave(cssClass("disabled"));
-        purchaseGiftButton.shouldHave(cssClass("disabled"));
+        purchaseSelfButton.shouldHave(cssClass("btn_disabled"));
+        purchaseGiftButton.shouldHave(cssClass("btn_disabled"));
         return this;
     }
 }
