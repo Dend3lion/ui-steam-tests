@@ -14,11 +14,6 @@ import static io.qameta.allure.Allure.step;
 
 public class TestBase {
     @BeforeAll
-    static void openPage() {
-        step("Go to main page", () -> open("/"));
-    }
-
-    @BeforeAll
     static void driverConfigure() {
         WebDriver.configure();
     }
@@ -26,6 +21,8 @@ public class TestBase {
     @BeforeEach
     void addListener() {
         SelenideLogger.addListener("allure", new AllureSelenide());
+
+        step("Go to main page", () -> open("/"));
     }
 
     @AfterEach
