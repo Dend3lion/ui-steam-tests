@@ -26,7 +26,8 @@ public class CartTests extends TestBase {
         mainPage.fillSearchInput(gameName)
                 .clickGameItem(gameName);
         gamePage.clickAddToCart();
-        cartPage.checkGameInCart(gameName);
+        cartPage.checkGameInCart(gameName)
+                .checkPurchaseButtonsEnabled();
     }
 
     @ValueSource(
@@ -43,7 +44,8 @@ public class CartTests extends TestBase {
         gamePage.clickAddToCart();
         cartPage.checkGameInCart(gameName)
                 .removeGameFromCart()
-                .checkGameNotInCart(gameName);
+                .checkGameNotInCart(gameName)
+                .checkPurchaseButtonsDisabled();
     }
 
     @Test
@@ -61,7 +63,10 @@ public class CartTests extends TestBase {
         gamePage.clickAddToCart();
         cartPage.checkGameInCart("COCOON")
                 .checkGameInCart("Cities: Skylines II")
-                .removeAllFromCart()
-                .checkCartIsEmpty();
+                .checkPurchaseButtonsEnabled()
+                .clickRemoveAllButton()
+                .confirmGamesRemoval()
+                .checkCartIsEmpty()
+                .checkPurchaseButtonsDisabled();
     }
 }

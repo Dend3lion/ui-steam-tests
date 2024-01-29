@@ -12,8 +12,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class CartPage {
     private final SelenideElement checkoutBlock = $(".checkout_content_box");
-    private final SelenideElement purchaseSelfButton = checkoutBlock.$(byText("Purchase as a gift")).parent();
-    private final SelenideElement purchaseGiftButton = checkoutBlock.$(byText("Purchase for myself")).parent();
+    private final SelenideElement purchaseGiftButton = checkoutBlock.$(byText("Purchase as a gift")).parent();
+    private final SelenideElement purchaseSelfButton = checkoutBlock.$(byText("Purchase for myself")).parent();
     private final SelenideElement removeGameFromCartButton = checkoutBlock.$$(".remove_link").first();
     private final SelenideElement removeAllFromCartButton = $(".checkout_notes_and_continue_shopping_ctn .remove_link");
     private final SelenideElement modalAcceptButton = $(".newmodal_buttons .btn_green_steamui");
@@ -27,8 +27,13 @@ public class CartPage {
     }
 
     @Step("Click 'Remove all items' button")
-    public CartPage removeAllFromCart() {
+    public CartPage clickRemoveAllButton() {
         removeAllFromCartButton.click();
+        return this;
+    }
+
+    @Step("Confirm deletion of all games")
+    public CartPage confirmGamesRemoval() {
         modalAcceptButton.click();
         return this;
     }
@@ -36,24 +41,33 @@ public class CartPage {
     @Step("Check that game '{gameName}' is in cart")
     public CartPage checkGameInCart(String gameName) {
         checkoutBlock.shouldHave(text(gameName));
-        purchaseSelfButton.shouldNotHave(cssClass("btn_disabled"));
-        purchaseGiftButton.shouldNotHave(cssClass("btn_disabled"));
         return this;
     }
 
     @Step("Check that game '{gameName}' is not in cart")
     public CartPage checkGameNotInCart(String gameName) {
         checkoutBlock.shouldNotHave(text(gameName));
-        purchaseSelfButton.shouldHave(cssClass("btn_disabled"));
-        purchaseGiftButton.shouldHave(cssClass("btn_disabled"));
         return this;
     }
 
     @Step("Check that cart is empty")
     public CartPage checkCartIsEmpty() {
         cartItemsList.shouldBe(CollectionCondition.empty);
+        return this;
+    }
+
+    @Step("Check that purchase buttons are enabled")
+    public CartPage checkPurchaseButtonsEnabled() {
+        purchaseSelfButton.shouldNotHave(cssClass("btn_disabled"));
+        purchaseGiftButton.shouldNotHave(cssClass("btn_disabled"));
+        return this;
+    }
+
+    @Step("Check that purchase buttons are disabled")
+    public CartPage checkPurchaseButtonsDisabled() {
         purchaseSelfButton.shouldHave(cssClass("btn_disabled"));
         purchaseGiftButton.shouldHave(cssClass("btn_disabled"));
         return this;
     }
+
 }
