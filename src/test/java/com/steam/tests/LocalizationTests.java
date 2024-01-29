@@ -25,7 +25,7 @@ public class LocalizationTests extends TestBase {
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.CRITICAL)
     @MethodSource
-    @ParameterizedTest(name = "For '{0}' locale main navbar buttons are '{1}'")
+    @ParameterizedTest(name = "For {0} locale main navbar buttons are {1}")
     void mainNavbarButtons(
             String language,
             List<String> navbarButtons

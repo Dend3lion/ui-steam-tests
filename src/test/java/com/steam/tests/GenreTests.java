@@ -19,7 +19,7 @@ public class GenreTests extends TestBase {
     @Story("Genres menu")
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.NORMAL)
-    @ParameterizedTest(name = "By clicking genre '{0}' go to page '{1}'")
+    @ParameterizedTest(name = "By clicking genre {0} go to page {1}")
     void checkGenre(
             String genre,
             String pageTitle
