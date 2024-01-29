@@ -3,6 +3,7 @@ package com.steam.tests;
 import com.steam.pages.MainPage;
 import com.steam.pages.SearchPage;
 import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -20,7 +21,8 @@ public class GenreTests extends TestBase {
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.NORMAL)
     @ParameterizedTest(name = "By clicking genre {0} go to page {1}")
-    void checkGenre(
+    @DisplayName("Go to genre page from genres sidebar")
+    void goToGenreTest(
             String genre,
             String pageTitle
     ) {

@@ -22,7 +22,8 @@ public class CartTests extends TestBase {
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.BLOCKER)
     @ParameterizedTest(name = "Add game {0} to cart")
-    void addToCartTest(String gameName) {
+    @DisplayName("Add game to cart")
+    public void addToCartTest(String gameName) {
         mainPage.fillSearchInput(gameName)
                 .clickGameItem(gameName);
         gamePage.clickAddToCart();
@@ -38,7 +39,8 @@ public class CartTests extends TestBase {
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.CRITICAL)
     @ParameterizedTest(name = "Remove game {0} from cart")
-    void removeFromCartTest(String gameName) {
+    @DisplayName("Remove game from cart")
+    public void removeFromCartTest(String gameName) {
         mainPage.fillSearchInput(gameName)
                 .clickGameItem(gameName);
         gamePage.clickAddToCart();
@@ -54,7 +56,7 @@ public class CartTests extends TestBase {
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Remove all items from cart")
-    void removeAllFromCartTest() {
+    public void removeAllFromCartTest() {
         mainPage.fillSearchInput("COCOON")
                 .clickGameItem("COCOON");
         gamePage.clickAddToCart();

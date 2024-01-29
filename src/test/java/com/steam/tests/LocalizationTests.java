@@ -2,6 +2,7 @@ package com.steam.tests;
 
 import com.steam.pages.MainPage;
 import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -26,6 +27,7 @@ public class LocalizationTests extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @MethodSource
     @ParameterizedTest(name = "For {0} locale main navbar buttons are {1}")
+    @DisplayName("Language has valid main navbar locale")
     void mainNavbarButtons(
             String language,
             List<String> navbarButtons

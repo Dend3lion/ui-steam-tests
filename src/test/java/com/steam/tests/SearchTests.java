@@ -23,6 +23,7 @@ public class SearchTests extends TestBase {
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.CRITICAL)
     @ParameterizedTest(name = "Search dropdown contains {1} when entering {0}")
+    @DisplayName("Search dropdown contains searched game")
     void searchGameInDropdownTest(
             String inputText,
             String gameName
@@ -40,6 +41,7 @@ public class SearchTests extends TestBase {
     @Owner("Denis Bashkatov")
     @Severity(SeverityLevel.CRITICAL)
     @ParameterizedTest(name = "Search page contains {1} when entering {0}")
+    @DisplayName("Search page contains searched game")
     void searchGameInResultsTest(
             String inputText,
             String gameName
