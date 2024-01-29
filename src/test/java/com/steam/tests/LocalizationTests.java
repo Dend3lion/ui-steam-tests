@@ -14,9 +14,9 @@ public class LocalizationTests extends TestBase {
 
     static Stream<Arguments> mainNavbarButtons() {
         return Stream.of(
-                Arguments.of("Русский (Russian)", List.of("МАГАЗИН", "СООБЩЕСТВО", "О STEAM", "ПОДДЕРЖКА")),
-                Arguments.of("English (английский)", List.of("STORE", "COMMUNITY", "ABOUT", "SUPPORT")),
-                Arguments.of("Italiano (итальянский)", List.of("NEGOZIO", "COMUNITÀ", "Informazioni", "ASSISTENZA"))
+                Arguments.of("Italiano (Italian)", List.of("NEGOZIO", "COMUNITÀ", "Informazioni", "ASSISTENZA")),
+                Arguments.of("Svenska (Swedish)", List.of("BUTIK", "GEMENSKAP", "OM", "KUNDTJÄNST")),
+                Arguments.of("Русский (Russian)", List.of("МАГАЗИН", "СООБЩЕСТВО", "ИНФОРМАЦИЯ", "ПОДДЕРЖКА"))
         );
     }
 

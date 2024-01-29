@@ -16,6 +16,7 @@ public class CartPage {
     private final SelenideElement purchaseGiftButton = checkoutBlock.$(byText("Purchase for myself")).parent();
     private final SelenideElement removeGameFromCartButton = checkoutBlock.$$(".remove_link").first();
     private final SelenideElement removeAllFromCartButton = $(".checkout_notes_and_continue_shopping_ctn .remove_link");
+    private final SelenideElement modalAcceptButton = $(".newmodal_buttons .btn_green_steamui");
     private final ElementsCollection cartItemsList = checkoutBlock.$$(".cart_item");
 
 
@@ -28,6 +29,7 @@ public class CartPage {
     @Step("Click 'Remove all items' button")
     public CartPage removeAllFromCart() {
         removeAllFromCartButton.click();
+        modalAcceptButton.click();
         return this;
     }
 
