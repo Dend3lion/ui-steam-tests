@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SearchPage {
-    private final SelenideElement pageTitle = $(".pageheader");
+    private final SelenideElement pageTitle = $(".ContentHubTitleCtn");
     private final SelenideElement searchResultsBlock = $("#search_result_container");
     private final SelenideElement steamLogo = $(".logo");
 

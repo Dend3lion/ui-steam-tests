@@ -1,6 +1,5 @@
 package com.steam.tests;
 
-import com.steam.config.Locale;
 import com.steam.pages.MainPage;
 import io.qameta.allure.*;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,9 +14,10 @@ public class LocalizationTests extends TestBase {
 
     static Stream<Arguments> mainNavbarButtons() {
         return Stream.of(
-                Arguments.of(Locale.EN, List.of("STORE", "COMMUNITY", "ABOUT", "SUPPORT")),
-                Arguments.of(Locale.IT, List.of("NEGOZIO", "COMUNITÀ", "Informazioni", "ASSISTENZA")),
-                Arguments.of(Locale.RU, List.of("МАГАЗИН", "СООБЩЕСТВО", "О STEAM", "ПОДДЕРЖКА"))
+                Arguments.of("English (английский)", List.of("STORE", "COMMUNITY", "ABOUT", "SUPPORT")),
+                Arguments.of("Italiano (итальянский)", List.of("NEGOZIO", "COMUNITÀ", "Informazioni", "ASSISTENZA")),
+                Arguments.of("Русский (Russian)", List.of("МАГАЗИН", "СООБЩЕСТВО", "О STEAM", "ПОДДЕРЖКА"))
+
         );
     }
 
@@ -28,11 +28,11 @@ public class LocalizationTests extends TestBase {
     @MethodSource
     @ParameterizedTest(name = "For '{0}' locale main navbar buttons are '{1}'")
     void mainNavbarButtons(
-            Locale locale,
+            String language,
             List<String> navbarButtons
     ) {
         mainPage.clickLanguageButton()
-                .selectLanguage(locale)
+                .selectLanguage(language)
                 .checkNavbarButtons(navbarButtons);
     }
 }

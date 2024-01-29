@@ -2,7 +2,6 @@ package com.steam.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import com.steam.config.Locale;
 import io.qameta.allure.Step;
 
 import java.util.List;
@@ -17,7 +16,7 @@ import static com.codeborne.selenide.Selenide.$$;
 public class MainPage {
     private final SelenideElement searchInput = $("#store_nav_search_term");
     private final SelenideElement searchDropdown = $("#search_suggestion_contents");
-    private final SelenideElement searchButton = $("#store_search_link");
+    private final SelenideElement searchButton = $("#store_search_link img");
     private final SelenideElement languageButton = $("#language_pulldown");
     private final SelenideElement languageDropdown = $("#language_dropdown");
     private final SelenideElement genresBlock = $(".home_page_gutter");
@@ -29,9 +28,9 @@ public class MainPage {
         return this;
     }
 
-    @Step("Click '{locale.getDesc()}' in Language dropdown")
-    public MainPage selectLanguage(Locale locale) {
-        languageDropdown.$(byText((locale.getDesc()))).click();
+    @Step("Click '{language}' in Language dropdown")
+    public MainPage selectLanguage(String language) {
+        languageDropdown.$(byText(language)).click();
         return this;
     }
 
