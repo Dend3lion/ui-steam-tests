@@ -1,6 +1,6 @@
-# Test automation project for [Wikipedia](https://ru.wikipedia.org/) mobile app
+# Test automation project for [Steam](https://store.steampowered.com/)
 
-<p align="center"><a href="https://ru.wikipedia.org/"><img src="media/images/Wiki_logo.png" align="center" width="200" height="200" alt="Wiki"/></a></p>  
+<p align="center"><a href="https://store.steampowered.com/"><img src="media/images/Steam_logo.png" align="center" height="200" alt="Steam"/></a></p>  
 
 ## :bookmark_tabs: Contents
 - [Technologies and tools](#computer-technologies-and-tools)
@@ -92,12 +92,12 @@ gradle clean test
 > `${remoteUrl}` - address of the remote server on which the tests will be run.
 >
 
-## <img alt="Jenkins" width="5%" src="media/images/Jenkins.svg"/> Build in [Jenkins](https://jenkins.autotests.cloud/job/mobile-wikipedia-tests/)
+## <img alt="Jenkins" width="5%" src="media/images/Jenkins.svg"/> Build in [Jenkins](https://jenkins.autotests.cloud/job/ui-steam-tests/)
 <p align="center">  
 <img src="media/images/Jenkins_Screenshot.png" alt="Jenkins" width="950"/></a>  
 </p>
 
-## <img alt="Allure Report" width="5%" src="media/images/Allure_Report.svg"/> Test results in [Allure report](https://jenkins.autotests.cloud/job/mobile-wikipedia-tests/allure/)
+## <img alt="Allure Report" width="5%" src="media/images/Allure_Report.svg"/> Test results in [Allure report](https://jenkins.autotests.cloud/job/ui-steam-tests/allure/)
 <p align="center">  
 <img src="media/images/AllureReport_Main.png" alt="Allure Report main page" width="950"/></a>  
 </p>
@@ -105,7 +105,7 @@ gradle clean test
 <img src="media/images/AllureReport_Tests.png" alt="Allure Report suites page" width="950"/></a>  
 </p>
 
-## <img alt="Allure TestOps" width="4%" src="media/images/AllureTestOps.svg"/> Test management in [Allure TestOps](https://allure.autotests.cloud/project/4001/dashboards)
+## <img alt="Allure TestOps" width="4%" src="media/images/AllureTestOps.svg"/> Test management in [Allure TestOps](https://allure.autotests.cloud/project/4010/dashboards)
 <p align="center">  
 <img src="media/images/AllureTestOps_Main.png" alt="Allure Report main page" width="950"/></a>  
 </p>
@@ -113,7 +113,7 @@ gradle clean test
 <img src="media/images/AllureTestOps_Tests.png" alt="Allure Report suites page" width="950"/></a>  
 </p>
 
-## <img alt="Jira" width="4%" src="media/images/Jira.svg"/> Integration with [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1085)
+## <img alt="Jira" width="4%" src="media/images/Jira.svg"/> Integration with [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1091)
 <p align="center">  
 <img src="media/images/Jira_Task.png" alt="Jira task page" width="950"/></a>  
 </p>
