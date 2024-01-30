@@ -1,6 +1,6 @@
 # Test automation project for [Steam](https://store.steampowered.com/)
 
-<p align="center"><a href="https://store.steampowered.com/"><img src="media/images/Steam_logo.png" align="center" height="200" alt="Steam"/></a></p>  
+<p align="center"><a href="https://store.steampowered.com/"><img src="media/images/Steam_Logo.png" align="center" height="200" alt="Steam"/></a></p>  
 
 ## :bookmark_tabs: Contents
 - [Technologies and tools](#computer-technologies-and-tools)
