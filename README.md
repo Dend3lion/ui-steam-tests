@@ -9,9 +9,8 @@
 - [Running tests locally](#rocket-running-tests-locally)
 - [Build in Jenkins](#-build-in-jenkins)
 - [Test results in Allure report](#-test-results-in-allure-report)
-- [Test management in Allure TestOps](#-allure-testops)
+- [Test management in Allure TestOps](#-test-management-in-allure-testops)
 - [Integration with Jira](#-integration-with-jira)
-- [Remote launch in Browserstack](#-remote-launch-in-browserstack)
 - [Notification of test results in Telegram](#-notification-of-test-results-in-telegram)
 - [Test video from Selenoid](#-test-video-from-selenoid)
 
